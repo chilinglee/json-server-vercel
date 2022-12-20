@@ -29,13 +29,13 @@
   "users": [
     {
       "id": 0,
-      "userName": "admin@hexschool.com",
+      "email": "admin@hexschool.com",
       "password": "hex12345",
       "fav": []
     },
     {
       "id": 1,
-      "userName": "19940818jillian@gmail.com",
+      "email": "19940818jillian@gmail.com",
       "password": "natalie329_",
       "fav": []
     },
