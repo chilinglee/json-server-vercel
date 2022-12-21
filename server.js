@@ -16,7 +16,7 @@ server.use(middlewares)
 server.db = router.db;
 server.use(auth);
 server.use(router)
-server.listen("https://apply-for-final.onrender.com", () => {
+server.listen(3000, () => {
     console.log('JSON Server is running')
 })
 
