@@ -9,7 +9,7 @@ const middlewares = jsonServer.defaults({ noCors: true });
 server.use(cors())
 server.use(middlewares)
 server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://chilinglee.github.io')
+  res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Headers', '*')
   res.header('Access-Control-Allow-Methods', '*')
   next()
