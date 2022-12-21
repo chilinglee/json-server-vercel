@@ -5,14 +5,15 @@ const server = jsonServer.create()
 const auth = require("json-server-auth");
 const db = require("./db.json");
 const router = jsonServer.router(db);
-const middlewares = jsonServer.defaults();
+const middlewares = jsonServer.defaults({ noCors: true });
 server.use(cors())
+server.use(middlewares)
 server.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://chilinglee.github.io')
   res.header('Access-Control-Allow-Headers', '*')
+  res.header('Access-Control-Allow-Methods', '*')
   next()
 })
-server.use(middlewares)
 server.db = router.db;
 server.use(auth);
 server.use(router)
